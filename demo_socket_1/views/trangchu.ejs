@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Demo sockie io</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script>
+        //ket noi toi server
+        var socket = io("http://localhost:3000");
+        //nhan data tu server
+        socket.on("Server-send-data",function(data){
+            $("#noidung").append(data+",");
+        })
+
+        $(document).ready(function(){
+           $("#mrA").click(function(){
+               //Gui data len server
+               socket.emit("Client-send-data","Hello")
+           }) ;
+        });
+    </script>
+</head>
+<body>
+   <div id="mrA">
+       Click send
+   </div>
+<h2 id="noidung"></h2>
+</body>
+</html>

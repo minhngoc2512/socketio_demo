@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Demo sockie io</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="xuly.js"></script>
+    <link rel="stylesheet" type="text/css" href="layout.css"/>
+</head>
+<body>
+<div id="wrapper">
+    <div id="loginForm">
+        <h3>What's your name</h3>
+        <input type="text" id="txtUserName">
+        <input type="button" value="Register" id="btnRegister">
+    </div>
+    <div id="chatForm">
+        <div id="left">
+            <div id="boxTitle">
+                User Online
+            </div>
+            <div id="boxContent">
+
+            </div>
+        </div>
+        <div id="right">
+            <div id="sayHi">
+                Hello <span id="currentUser">Teo</span>
+              <input type="button" id="btnLogout" value="Logout">
+            </div>
+            <div id="listMessage">
+
+            </div>
+            <input type="text" id="txtMessage" placeholder="Message">
+            <input type="button" id="btnSendMessage" value="Send">
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
